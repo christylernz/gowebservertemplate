@@ -1,0 +1,5 @@
+#ignore all client files
+client/*
+
+#do not ignore these files
+!client/readme.md
