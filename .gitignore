@@ -1,5 +1,8 @@
 #ignore all client files
+*.exe
 client/*
 
 #do not ignore these files
 !client/readme.md
+
+

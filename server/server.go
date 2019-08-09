@@ -13,6 +13,11 @@ type Application struct {
 	Router     *mux.Router
 }
 
+//Register route to an application's router for handling
+func (app Application) Register(route string, f func(http.ResponseWriter, *http.Request)) {
+	app.Router.HandleFunc(route, f)
+}
+
 //NewWeb Creates a new application for handling of Web Application
 func NewWeb(root string, router *mux.Router) *Application {
 	//Setting up negroni for MiddleWare
